@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.5">
+    <title>Abdoulaye Market - Produits importés de Chine</title>
+    <!-- Font Awesome pour les icônes -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f8f9fa;
+            color: #212529;
+            line-height: 1.6;
+            padding-bottom: 3rem;
+        }
+
+        /* --- HEADER & NAVIGATION --- */
+        header {
+            background: #0a2540;
+            color: white;
+            padding: 1rem 0;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        .header-flex {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .logo h1 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+        .logo span {
+            color: #f9c74f;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 1.8rem;
+            flex-wrap: wrap;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1.05rem;
+            padding: 0.4rem 0;
+            border-bottom: 2px solid transparent;
+            transition: 0.2s;
+        }
+
+        nav ul li a:hover,
+        nav ul li a.active {
+            border-bottom-color: #f9c74f;
+            color: #f9c74f;
+        }
+
+        /* --- PAGES (section cachée / affichée) --- */
+        .page {
+            display: none;
+            animation: fadeIn 0.3s ease;
+        }
+
+        .page.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            0% { opacity: 0; transform: translateY(6px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        /* --- SECTIONS GÉNÉRIQUES --- */
+        .section-title {
+            font-size: 2.2rem;
+            font-weight: 600;
+            margin: 2rem 0 1.5rem;
+            color: #0a2540;
+            border-left: 6px solid #f9c74f;
+            padding-left: 1rem;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #e8f0fe 0%, #d4e0f0 100%);
+            padding: 3rem 2rem;
+            border-radius: 24px;
+            margin: 1.5rem 0 2.5rem;
+            text-align: center;
+        }
+
+        .hero h2 {
+            font-size: 2.8rem;
+            color: #0a2540;
+        }
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 1rem auto;
+        }
+
+        .btn {
+            display: inline-block;
+            background: #0a2540;
+            color: white;
+            padding: 0.8rem 2rem;
+            border-radius: 40px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: 0.2s;
+            border: none;
+            cursor: pointer;
+        }
+        .btn:hover {
+            background: #f9c74f;
+            color: #0a2540;
+            transform: scale(1.02);
+        }
+
+        /* --- GRILLE PRODUITS --- */
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+            gap: 1.8rem;
+            margin: 2rem 0;
+        }
+
+        .product-card {
+            background: white;
+            padding: 1.5rem 1rem;
+            border-radius: 20px;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+            text-align: center;
+            transition: 0.2s;
+            border: 1px solid #e9ecef;
+        }
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 28px rgba(0,0,0,0.08);
+        }
+        .product-card i {
+            font-size: 3.2rem;
+            color: #0a2540;
+            background: #f1f5f9;
+            padding: 0.8rem;
+            border-radius: 50%;
+            margin-bottom: 0.8rem;
+        }
+        .product-card h3 {
+            font-size: 1.2rem;
+            margin-bottom: 0.3rem;
+        }
+        .product-card p {
+            color: #495057;
+            font-size: 0.95rem;
+        }
+
+        /* --- CONTACT / À PROPOS --- */
+        .contact-info {
+            background: white;
+            padding: 2rem;
+            border-radius: 24px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+            margin: 2rem 0;
+        }
+        .contact-info p {
+            font-size: 1.1rem;
+            margin: 0.6rem 0;
+        }
+        .contact-info i {
+            width: 2rem;
+            color: #0a2540;
+        }
+
+        .about-text {
+            background: white;
+            padding: 2rem;
+            border-radius: 24px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+            font-size: 1.1rem;
+        }
+
+        /* --- WHATSAPP FLOTTANT --- */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 28px;
+            right: 28px;
+            background-color: #25d366;
+            color: white;
+            width: 64px;
+            height: 64px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.6rem;
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+            z-index: 999;
+            transition: 0.2s;
+            text-decoration: none;
+            border: 2px solid white;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.08);
+            background-color: #20b85f;
+            box-shadow: 0 8px 28px rgba(37, 211, 102, 0.6);
+        }
+
+        /* petit tooltip sur le bouton */
+        .whatsapp-float::after {
+            content: "WhatsApp";
+            position: absolute;
+            right: 78px;
+            background: #0a2540;
+            color: white;
+            padding: 0.3rem 0.9rem;
+            border-radius: 30px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            white-space: nowrap;
+            opacity: 0;
+            pointer-events: none;
+            transition: 0.2s;
+        }
+        .whatsapp-float:hover::after {
+            opacity: 1;
+        }
+
+        /* --- FOOTER --- */
+        footer {
+            margin-top: 4rem;
+            text-align: center;
+            color: #6c757d;
+            border-top: 1px solid #dee2e6;
+            padding-top: 2rem;
+        }
+
+        /* --- RESPONSIVE --- */
+        @media (max-width: 720px) {
+            .header-flex {
+                flex-direction: column;
+                gap: 0.8rem;
+            }
+            nav ul {
+                justify-content: center;
+                gap: 1rem;
+            }
+            .hero h2 {
+                font-size: 2rem;
+            }
+            .whatsapp-float {
+                width: 56px;
+                height: 56px;
+                font-size: 2.2rem;
+                bottom: 20px;
+                right: 20px;
+            }
+            .whatsapp-float::after {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+    <div class="container header-flex">
+        <div class="logo">
+            <h1>Abdoulaye <span>Market</span></h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#" class="active" data-page="accueil">Accueil</a></li>
+                <li><a href="#" data-page="produits">Produits</a></li>
+                <li><a href="#" data-page="apropos">À propos</a></li>
+                <li><a href="#" data-page="contact">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<!-- CONTENEUR PRINCIPAL -->
+<div class="container">
+
+    <!-- ========= PAGE ACCUEIL ========= -->
+    <section id="accueil" class="page active">
+        <div class="hero">
+            <h2>📍 Importation directe de Chine</h2>
+            <p>iPhone, ordinateurs, photocopieurs, vêtements, lampes solaires et bien plus encore. Qualité et prix compétitifs.</p>
+            <a href="#" class="btn" data-page="produits">Voir nos produits</a>
+        </div>
+
+        <h2 class="section-title">⭐ Catégories populaires</h2>
+        <div class="product-grid">
+            <div class="product-card"><i class="fas fa-mobile-alt"></i><h3>iPhone</h3><p>Derniers modèles</p></div>
+            <div class="product-card"><i class="fas fa-laptop"></i><h3>Ordinateurs</h3><p>PC & Mac</p></div>
+            <div class="product-card"><i class="fas fa-print"></i><h3>Photocopieurs</h3><p>Multifonctions</p></div>
+            <div class="product-card"><i class="fas fa-tshirt"></i><h3>Vêtements</h3><p>Mode tendance</p></div>
+            <div class="product-card"><i class="fas fa-solar-panel"></i><h3>Lampes solaires</h3><p>Éco-énergétiques</p></div>
+        </div>
+        <p style="text-align:center; margin: 1.5rem 0;">✅ Tous nos produits sont importés directement depuis la Chine.</p>
+    </section>
+
+    <!-- ========= PAGE PRODUITS ========= -->
+    <section id="produits" class="page">
+        <h2 class="section-title">📦 Nos produits</h2>
+        <div class="product-grid">
+            <div class="product-card"><i class="fas fa-mobile-alt"></i><h3>iPhone 15 Pro</h3><p>Neuf, débloqué</p></div>
+            <div class="product-card"><i class="fas fa-mobile-alt"></i><h3>iPhone 14</h3><p>Reconditionné</p></div>
+            <div class="product-card"><i class="fas fa-laptop"></i><h3>MacBook Air</h3><p>M2, 13"</p></div>
+            <div class="product-card"><i class="fas fa-laptop"></i><h3>Dell XPS 13</h3><p>Intel Core i7</p></div>
+            <div class="product-card"><i class="fas fa-print"></i><h3>Canon IR</h3><p>Photocopieur pro</p></div>
+            <div class="product-card"><i class="fas fa-print"></i><h3>HP LaserJet</h3><p>Multifonction</p></div>
+            <div class="product-card"><i class="fas fa-tshirt"></i><h3>Vêtements été</h3><p>Lots variés</p></div>
+            <div class="product-card"><i class="fas fa-tshirt"></i><h3>Tenues formelles</h3><p>Homme / Femme</p></div>
+            <div class="product-card"><i class="fas fa-solar-panel"></i><h3>Lampe 50W</h3><p>Panneau solaire</p></div>
+            <div class="product-card"><i class="fas fa-solar-panel"></i><h3>Kit solaire 100W</h3><p>Avec batterie</p></div>
+            <div class="product-card"><i class="fas fa-headphones"></i><h3>Accessoires</h3><p>Écouteurs, coques</p></div>
+            <div class="product-card"><i class="fas fa-plug"></i><h3>Chargeurs</h3><p>Originaux & rapides</p></div>
+        </div>
+        <p style="margin-top:1rem;">💬 Contactez-nous pour connaître la disponibilité et les prix.</p>
+    </section>
+
+    <!-- ========= PAGE À PROPOS ========= -->
+    <section id="apropos" class="page">
+        <h2 class="section-title">🔍 À propos d'Abdoulaye Market</h2>
+        <div class="about-text">
+            <p><strong>Abdoulaye Market</strong> est une société spécialisée dans l'importation de produits électroniques, textiles et énergies renouvelables depuis la Chine. </p>
+            <p>Nous sélectionnons rigoureusement nos fournisseurs pour vous offrir le meilleur rapport qualité-prix. Que vous soyez particulier ou professionnel, nous avons des solutions adaptées à vos besoins.</p>
+            <p>📍 Basés au Bénin, nous livrons dans toute la sous-région.</p>
+            <p><i class="fas fa-check-circle" style="color:#25a36f;"></i> Expérience, fiabilité et transparence.</p>
+        </div>
+    </section>
+
+    <!-- ========= PAGE CONTACT ========= -->
+    <section id="contact" class="page">
+        <h2 class="section-title">📞 Contactez-nous</h2>
+        <div class="contact-info">
+            <p><i class="fas fa-user"></i> <strong>Abdoulaye</strong> (Gérant)</p>
+            <p><i class="fas fa-phone-alt"></i> <strong>Téléphone :</strong> +229 90 06 84 87</p>
+            <p><i class="fas fa-whatsapp" style="color:#25d366;"></i> <strong>WhatsApp :</strong> +229 90 06 84 87</p>
+            <p><i class="fas fa-envelope"></i> <strong>Email :</strong> contact@abdoulayemarket.com</p>
+            <p><i class="fas fa-map-marker-alt"></i> <strong>Adresse :</strong> Cotonou, Bénin</p>
+            <p style="margin-top:1.5rem;">🕒 Horaires : Lun - Sam (8h - 19h)</p>
+        </div>
+        <p>✉️ Pour toute demande, appelez-nous ou écrivez-nous sur WhatsApp.</p>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy; 2026 Abdoulaye Market — Importation depuis la Chine</p>
+        <p style="font-size:0.9rem;">iPhone · Ordinateurs · Photocopieurs · Vêtements · Lampes solaires</p>
+    </footer>
+</div>
+
+<!-- ===== BOUTON WHATSAPP FLOTTANT ===== -->
+<a href="https://wa.me/22990068487?text=Bonjour%20Abdoulaye%20Market%2C%20je%20suis%20intéress%C3%A9%20par%20vos%20produits." 
+   class="whatsapp-float" 
+   target="_blank" 
+   rel="noopener noreferrer" 
+   aria-label="Contacter sur WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+</a>
+
+<!-- ===== SCRIPT POUR LA NAVIGATION ===== -->
+<script>
+    (function() {
+        // Récupération des éléments
+        const navLinks = document.querySelectorAll('nav ul li a');
+        const pages = {
+            accueil: document.getElementById('accueil'),
+            produits: document.getElementById('produits'),
+            apropos: document.getElementById('apropos'),
+            contact: document.getElementById('contact')
+        };
+
+        // Fonction pour changer de page
+        function switchPage(pageId) {
+            // Cacher toutes les pages
+            Object.keys(pages).forEach(id => {
+                pages[id].classList.remove('active');
+            });
+            // Afficher la page cible
+            if (pages[pageId]) {
+                pages[pageId].classList.add('active');
+            }
+            // Mise à jour de la classe active sur les liens
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.dataset.page === pageId) {
+                    link.classList.add('active');
+                }
+            });
+            // Scroll en haut (optionnel)
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // Gestionnaire de clic sur les liens de navigation
+        navLinks.forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const page = this.dataset.page;
+                if (page && pages[page]) {
+                    switchPage(page);
+                }
+            });
+        });
+
+        // Gestion des clics sur les boutons "Voir nos produits" / etc. (data-page)
+        document.querySelectorAll('[data-page]').forEach(el => {
+            el.addEventListener('click', function(e) {
+                // Si c'est un lien avec href="#", on empêche le saut
+                if (this.tagName === 'A' && this.getAttribute('href') === '#') {
+                    e.preventDefault();
+                }
+                const page = this.dataset.page;
+                if (page && pages[page]) {
+                    switchPage(page);
+                }
+            });
+        });
+
+        // Page par défaut : accueil (déjà active)
+        // Si l'utilisateur clique sur un lien avec data-page="accueil" on reste cohérent
+        // Vérification initiale : s'assurer que l'accueil est bien actif
+        // (déjà fait dans le HTML avec class="active")
+    })();
+</script>
+
+</body>
+</html>
