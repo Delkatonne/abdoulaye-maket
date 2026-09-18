@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.5">
+<title>Abdoulaye Market - Vêtements</title>
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: { navy: { DEFAULT: '#0a2540', light: '#123a5e' }, gold: '#f9c74f' },
+        fontFamily: { sans: ['Segoe UI', 'Roboto', 'Helvetica', 'Arial', 'sans-serif'] }
+      }
+    }
+  }
+</script>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="bg-slate-50 text-slate-800 leading-relaxed pb-12">
+
+<header class="bg-navy text-white sticky top-0 z-50 shadow-lg">
+  <div class="max-w-6xl mx-auto px-6 py-4 flex flex-wrap items-center justify-between gap-3">
+    <div class="text-2xl font-bold tracking-wide">
+      <a href="index.html">
+        <img src="images/logo.jpg" alt="logo" class="inline-block w-10 h-10 rounded-full mr-2 object-cover">
+      </a>
+      Abdoulaye <span class="text-gold">Market</span>
+    </div>
+    <nav>
+      <ul class="flex flex-wrap gap-7">
+        <li><a href="index.html" class="border-b-2 border-transparent pb-1 font-medium transition hover:text-gold hover:border-gold">Accueil</a></li>
+        <li><a href="produits.html" class="active border-b-2 border-transparent pb-1 font-medium transition hover:text-gold hover:border-gold">Produits</a></li>
+        <li><a href="apropos.html" class="border-b-2 border-transparent pb-1 font-medium transition hover:text-gold hover:border-gold">À propos</a></li>
+        <li><a href="contact.html" class="border-b-2 border-transparent pb-1 font-medium transition hover:text-gold hover:border-gold">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<div class="max-w-6xl mx-auto px-6">
+
+  <nav class="text-sm text-slate-500 my-6">
+    <a href="index.html" class="hover:text-gold">Accueil</a>
+    <span class="mx-2">›</span>
+    <a href="produits.html" class="hover:text-gold">Produits</a>
+    <span class="mx-2">›</span>
+    <span class="text-navy font-medium">Vêtements</span>
+  </nav>
+
+  <div class="relative rounded-3xl overflow-hidden mb-10">
+    <img src="https://picsum.photos/seed/cat-vetements/1200/400" alt="Vêtements" class="w-full h-56 md:h-72 object-cover">
+    <div class="absolute inset-0 bg-gradient-to-r from-navy/90 via-navy/70 to-navy/20"></div>
+    <div class="absolute inset-0 flex flex-col justify-center px-6 md:px-14 text-white">
+      <div class="flex items-center gap-3 mb-2">
+        <i class="bi bi-bag text-gold text-3xl"></i>
+        <h2 class="text-3xl md:text-5xl font-bold">Vêtements</h2>
+      </div>
+      <p class="max-w-xl text-slate-100">Vêtements homme et femme, du casual au formel.</p>
+    </div>
+  </div>
+
+  <h3 class="text-2xl font-semibold text-navy border-l-4 border-gold pl-4 mb-6">Modèles disponibles</h3>
+  <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6 mb-10">
+
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNLnoa9BpKsLdiTdWXowBUN2MJevgQKXWfD16Lt3v-ow&s=10" alt="Vêtements été" class="w-full h-32 object-cover">
+      <div class="p-4 flex flex-col flex-1">
+        <h3 class="font-semibold">Vêtements été</h3>
+        <p class="text-sm text-slate-500 mb-3 flex-1">Lots variés</p>
+        <a href="https://wa.me/22990068487?text=Bonjour%2C%20je%20suis%20intéressé%20par%20le%20Kit%20solaire%20200W."
+           target="_blank" rel="noopener noreferrer"
+           class="text-gold text-sm font-semibold hover:underline">Commander →</a>
+      </div>
+
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROUCbM_ZaxKR0F-Y17KbNOWpHcFFW_ACxrh8SxWiczTw&s=10" alt="Tenues formelles" class="w-full h-32 object-cover">
+      <div class="p-4 flex flex-col flex-1">
+        <h3 class="font-semibold">Tenues formelles</h3>
+        <p class="text-sm text-slate-500 mb-3 flex-1">Homme / Femme</p>
+        <a href="https://wa.me/22990068487?text=Bonjour%2C%20je%20suis%20intéressé%20par%20le%20Kit%20solaire%20200W."
+           target="_blank" rel="noopener noreferrer"
+           class="text-gold text-sm font-semibold hover:underline">Commander →</a>
+      </div>
+
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqBppjbmkbpnxwadM4BSYJVlmg3wFEVRgAR65zpYaWJw&s=10" alt="hoodies" class="w-full h-32 object-cover">
+      <div class="p-4 flex flex-col flex-1">
+        <h3 class="font-semibold">Hoodies</h3>
+        <p class="text-sm text-slate-500 mb-3 flex-1">Style urbain</p>
+        <a href="https://wa.me/22990068487?text=Bonjour%2C%20je%20suis%20intéressé%20par%20le%20Kit%20solaire%20200W."
+           target="_blank" rel="noopener noreferrer"
+           class="text-gold text-sm font-semibold hover:underline">Commander →</a>
+      </div>
+
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZxBcgplq6AraWFrs-r7SHp5erfwq_aDtayg8Ovf3qDQ&s=10" alt="kit home" class="w-full h-32 object-cover">
+      <div class="p-4 flex flex-col flex-1">
+        <h3>Kit Homme</h3>
+        <p class="text-sm text-slate-500 mb-3 flex-1">style élégant</p>
+        <a href="https://wa.me/22990068487?text=Bonjour%2C%20je%20suis%20intéressé%20par%20le%20Kit%20solaire%20200W."
+           target="_blank" rel="noopener noreferrer"
+           class="text-gold text-sm font-semibold hover:underline">Commander →</a>
+      </div>
+
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_nNHalt8aaYfhA1dNeOar0iRVMTJVInz2G4b2qGc5pw&s=10" alt="Balenciaga" class="w-ful h-32 objet-cover">
+      <div class="p-4 flex flex-col flex-1">
+        <h3>Balenciaga</h3>
+        <p class="text-sm text-slate-500 mb-3 flex-1">Style high-end</p>
+        <a href="https://wa.me/22990068487?text=Bonjour%2C%20je%20suis%20intéressé%20par%20le%20Kit%20solaire%20200W."
+           target="_blank" rel="noopener noreferrer"
+           class="text-gold text-sm font-semibold hover:underline">Commander →</a>
+      </div>
+
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR27AY06p5Wr4LAPgJdIf1xl4Wkhmz_uTbROBQN-8xNnA&s=10" alt="basket" class="w-full h-32 object-cover">
+      <div class="p-4 flex flex-col flex-1">
+        <h3>Basket</h3>
+        <p class="text-sm text-slate-500 mb-3 flex-1">Style sportif</p>
+        <a href="https://wa.me/22990068487?text=Bonjour%2C%20je%20suis%20intéressé%20par%20le%20Kit%20solaire%20200W."
+           target="_blank" rel="noopener noreferrer"
+           class="text-gold text-sm font-semibold hover:underline">Commander →</a>
+      </div>
+
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUEP6jOsUS6opnYn1blK4_Q8TgneZTKv-v3Yy2jdIlmA&s=10" alt="tennis" class="w-full h-32 object-cover">
+      <div class="p-4 flex flex-col flex-1">
+        <h3>Tennis</h3>
+        <p class="text-sm text-slate-500 mb-3 flex-1">Style sportif</p>
+        <a href="https://wa.me/22990068487?text=Bonjour%2C%20je%20suis%20intéressé%20par%20le%20Kit%20solaire%20200W."
+           target="_blank" rel="noopener noreferrer"
+           class="text-gold text-sm font-semibold hover:underline">Commander →</a>
+      </div>
+
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRN3yVVRBdKIimVeQc33aPgCrDaDszTqCr0DSkx5H64jg&s=10" alt="crampon" class="w-full h-32 object-cover">
+      <div class="p-4 flex flex-col flex-1">
+        <h3>Crampon</h3>
+        <p class="text-sm text-slate-500 mb-3 flex-1">Style sportif</p>
+        <a href="https://wa.me/22990068487?text=Bonjour%2C%20je%20suis%20intéressé%20par%20le%20Kit%20solaire%20200W."
+           target="_blank" rel="noopener noreferrer"
+           class="text-gold text-sm font-semibold hover:underline">Commander →</a>
+      </div>
+  </div>
+
+  <a href="produits.html" class="inline-flex items-center gap-2 text-navy font-medium hover:text-gold transition mb-10">
+    <i class="bi bi-arrow-left"></i> Retour au catalogue
+  </a>
+
+  <footer class="mt-16 text-center text-slate-500 border-t border-slate-200 pt-8">
+    <p>&copy; 2026 Abdoulaye Market — Importation depuis la Chine</p>
+    <p class="text-sm mt-1">iPhone · Ordinateurs · Photocopieurs · Vêtements · Lampes solaires</p>
+  </footer>
+</div>
+
+<a href="https://wa.me/22990068487?text=Bonjour%20Abdoulaye%20Market%2C%20je%20suis%20intéress%C3%A9%20par%20vos%20produits."
+   target="_blank" rel="noopener noreferrer" aria-label="Contacter sur WhatsApp"
+   class="group fixed bottom-7 right-7 z-[999] w-16 h-16 rounded-full bg-[#25d366] text-white border-2 border-white shadow-lg flex items-center justify-center text-3xl hover:scale-105 transition">
+  <i class="bi bi-whatsapp"></i>
+  <span class="pointer-events-none absolute right-[78px] whitespace-nowrap bg-navy text-white text-sm font-medium px-4 py-1.5 rounded-full opacity-0 group-hover:opacity-100 transition">WhatsApp</span>
+</a>
+
+</body>
+</html>

@@ -1,0 +1,20 @@
+/* Styles complémentaires à Tailwind CSS (chargé en CDN dans index.html) */
+
+.page {
+  display: none;
+  animation: fadeIn 0.3s ease;
+}
+
+.page.active {
+  display: block;
+}
+
+@keyframes fadeIn {
+  0%   { opacity: 0; transform: translateY(6px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+nav a.active {
+  color: #f9c74f;
+  border-bottom-color: #f9c74f;
+}

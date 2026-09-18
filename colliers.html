@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.5">
+<title>Abdoulaye Market - Colliers</title>
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: { navy: { DEFAULT: '#0a2540', light: '#123a5e' }, gold: '#f9c74f' },
+        fontFamily: { sans: ['Segoe UI', 'Roboto', 'Helvetica', 'Arial', 'sans-serif'] }
+      }
+    }
+  }
+</script>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="bg-slate-50 text-slate-800 leading-relaxed pb-12">
+
+<header class="bg-navy text-white sticky top-0 z-50 shadow-lg">
+  <div class="max-w-6xl mx-auto px-6 py-4 flex flex-wrap items-center justify-between gap-3">
+    <div class="text-2xl font-bold tracking-wide">
+      <a href="index.html">
+        <img src="images/logo.jpg" alt="logo" class="inline-block w-10 h-10 rounded-full mr-2 object-cover">
+      </a>
+      Abdoulaye <span class="text-gold">Market</span>
+    </div>
+    <nav>
+      <ul class="flex flex-wrap gap-7">
+        <li><a href="index.html" class="border-b-2 border-transparent pb-1 font-medium transition hover:text-gold hover:border-gold">Accueil</a></li>
+        <li><a href="produits.html" class="active border-b-2 border-transparent pb-1 font-medium transition hover:text-gold hover:border-gold">Produits</a></li>
+        <li><a href="apropos.html" class="border-b-2 border-transparent pb-1 font-medium transition hover:text-gold hover:border-gold">À propos</a></li>
+        <li><a href="contact.html" class="border-b-2 border-transparent pb-1 font-medium transition hover:text-gold hover:border-gold">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<div class="max-w-6xl mx-auto px-6">
+
+  <nav class="text-sm text-slate-500 my-6">
+    <a href="index.html" class="hover:text-gold">Accueil</a>
+    <span class="mx-2">›</span>
+    <a href="produits.html" class="hover:text-gold">Produits</a>
+    <span class="mx-2">›</span>
+    <span class="text-navy font-medium">Colliers</span>
+  </nav>
+
+  <div class="relative rounded-3xl overflow-hidden mb-10">
+    <img src="https://picsum.photos/seed/cat-colliers/1200/400" alt="Colliers" class="w-full h-56 md:h-72 object-cover">
+    <div class="absolute inset-0 bg-gradient-to-r from-navy/90 via-navy/70 to-navy/20"></div>
+    <div class="absolute inset-0 flex flex-col justify-center px-6 md:px-14 text-white">
+      <div class="flex items-center gap-3 mb-2">
+        <i class="bi bi-gem text-gold text-3xl"></i>
+        <h2 class="text-3xl md:text-5xl font-bold">Colliers</h2>
+      </div>
+      <p class="max-w-xl text-slate-100">Bijoux et colliers tendances pour toutes les occasions.</p>
+    </div>
+  </div>
+
+  <h3 class="text-2xl font-semibold text-navy border-l-4 border-gold pl-4 mb-6">Modèles disponibles</h3>
+  <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6 mb-10">
+
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1MjSCrE5i1Bh7BOIndVmIGGlgPvZqFPLeUDLMWrB9bA&s=10" alt="Collier plaqué or" class="w-full h-32 object-cover">
+      <div class="p-4 flex flex-col flex-1">
+        <h3 class="font-semibold">Collier plaqué or</h3>
+        <p class="text-sm text-slate-500 mb-3 flex-1">Finition brillante</p>
+        <input type="button" value="Commander →" onclick="window.location.href='https://wa.me/22990068487?text=Bonjour%20Abdoulaye%20Market%2C%20je%20suis%20int%C3%A9ress%C3%A9%20par%20ce%20produits.'" class="text-gold text-sm font-semibold cursor-pointer bg-transparent border-none p-0">
+      </div>
+
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-auF529k8GDXZaQY55ADwMYVFzftH0cvOWcEhJPpYzQ&s=10" alt="Collier perles" class="w-full h-32 object-cover">
+      <div class="p-4 flex flex-col flex-1">
+        <h3 class="font-semibold">Collier perles</h3>
+        <p class="text-sm text-slate-500 mb-3 flex-1">Style élégant</p>
+        <input type="button" value="Commander →" onclick="window.location.href='https://wa.me/22990068487?text=Bonjour%20Abdoulaye%20Market%2C%20je%20suis%20int%C3%A9ress%C3%A9%20par%20ce%20produits.'" class="text-gold text-sm font-semibold cursor-pointer bg-transparent border-none p-0">
+
+      </div>
+
+      <img src="data:image/jpeg;base64,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" alt="Collier acier" class="w-full h-32 object-cover">
+      <div class="p-4 flex flex-col flex-1">
+        <h3 class="font-semibold">Collier acier</h3>
+        <p class="text-sm text-slate-500 mb-3 flex-1">Résistant, hypoallergénique</p>
+        <input type="button" value="Commander →" onclick="window.location.href='https://wa.me/22990068487?text=Bonjour%20Abdoulaye%20Market%2C%20je%20suis%20int%C3%A9ress%C3%A9%20par%20ce%20produits.'" class="text-gold text-sm font-semibold cursor-pointer bg-transparent border-none p-0">
+      </div>
+
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2W-mavJ_TMFWl8dr5pn7PA06bsKp7SGaViuaOQB0ibg&s=10" alt="Collier perles" class="w-full h-32 object-cover">
+      <div class="p-4 flex flex-col flex-1">
+        <h3 class="font-semibold">Collier argent</h3>
+        <p class="text-sm text-slate-500 mb-3 flex-1">Style élégant</p>
+        <input type="button" value="Commander →" onclick="window.location.href='https://wa.me/22990068487?text=Bonjour%20Abdoulaye%20Market%2C%20je%20suis%20int%C3%A9ress%C3%A9%20par%20ce%20produits.'" class="text-gold text-sm font-semibold cursor-pointer bg-transparent border-none p-0">
+      </div>
+
+       <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8C49rs2Wg952WMnkoDugyzU9oqoTox_vpq4T9h6d7Sw&s=10" alt="Collier perles" class="w-full h-32 object-cover">
+      <div class="p-4 flex flex-col flex-1">
+        <h3 class="font-semibold">Pendentif en acier</h3>
+        <p class="text-sm text-slate-500 mb-3 flex-1">inoxydable</p>
+        <input type="button" value="Commander →" onclick="window.location.href='https://wa.me/22990068487?text=Bonjour%20Abdoulaye%20Market%2C%20je%20suis%20int%C3%A9ress%C3%A9%20par%20ce%20produits.'" class="text-gold text-sm font-semibold cursor-pointer bg-transparent border-none p-0">
+      </div>
+
+
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7Xp8bqHV1QbsPbdovz-nlMSpipVjgqFSg5oNWN-cRvg&s=10" alt="Collier perles" class="w-full h-32 object-cover">
+      <div class="p-4 flex flex-col flex-1">
+        <h3 class="font-semibold">Autres modèles</h3>
+        <p class="text-sm text-slate-500 mb-3 flex-1">Style élégant</p>
+        <input type="button" value="Commander →" onclick="window.location.href='https://wa.me/22990068487?text=Bonjour%20Abdoulaye%20Market%2C%20je%20suis%20int%C3%A9ress%C3%A9%20par%20ce%20produits.'" class="text-gold text-sm font-semibold cursor-pointer bg-transparent border-none p-0">
+      </div>
+
+     
+
+  </div>
+
+  <a href="produits.html" class="inline-flex items-center gap-2 text-navy font-medium hover:text-gold transition mb-10">
+    <i class="bi bi-arrow-left"></i> Retour au catalogue
+  </a>
+
+  <footer class="mt-16 text-center text-slate-500 border-t border-slate-200 pt-8">
+    <p>&copy; 2026 Abdoulaye Market — Importation depuis la Chine</p>
+    <p class="text-sm mt-1">iPhone · Ordinateurs · Photocopieurs · Vêtements · Lampes solaires</p>
+  </footer>
+</div>
+
+<a href="https://wa.me/22990068487?text=Bonjour%20Abdoulaye%20Market%2C%20je%20suis%20intéress%C3%A9%20par%20vos%20produits."
+   target="_blank" rel="noopener noreferrer" aria-label="Contacter sur WhatsApp"
+   class="group fixed bottom-7 right-7 z-[999] w-16 h-16 rounded-full bg-[#25d366] text-white border-2 border-white shadow-lg flex items-center justify-center text-3xl hover:scale-105 transition">
+  <i class="bi bi-whatsapp"></i>
+  <span class="pointer-events-none absolute right-[78px] whitespace-nowrap bg-navy text-white text-sm font-medium px-4 py-1.5 rounded-full opacity-0 group-hover:opacity-100 transition">WhatsApp</span>
+</a>
+
+</body>
+</html>

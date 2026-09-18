@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.5">
+<title>Abdoulaye Market - Panneaux solaires</title>
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: { navy: { DEFAULT: '#0a2540', light: '#123a5e' }, gold: '#f9c74f' },
+        fontFamily: { sans: ['Segoe UI', 'Roboto', 'Helvetica', 'Arial', 'sans-serif'] }
+      }
+    }
+  }
+</script>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="bg-slate-50 text-slate-800 leading-relaxed pb-12">
+
+<!-- HEADER -->
+<header class="bg-navy text-white sticky top-0 z-50 shadow-lg">
+  <div class="max-w-6xl mx-auto px-6 py-4 flex flex-wrap items-center justify-between gap-3">
+    <div class="text-2xl font-bold tracking-wide">
+      <a href="index.html">
+        <img src="images/logo.jpg" alt="logo" class="inline-block w-10 h-10 rounded-full mr-2 object-cover">
+      </a>
+      Abdoulaye <span class="text-gold">Market</span>
+    </div>
+    <nav>
+      <ul class="flex flex-wrap gap-7">
+        <li><a href="index.html" class="border-b-2 border-transparent pb-1 font-medium transition hover:text-gold hover:border-gold">Accueil</a></li>
+        <li><a href="produits.html" class="active border-b-2 border-transparent pb-1 font-medium transition hover:text-gold hover:border-gold">Produits</a></li>
+        <li><a href="apropos.html" class="border-b-2 border-transparent pb-1 font-medium transition hover:text-gold hover:border-gold">À propos</a></li>
+        <li><a href="contact.html" class="border-b-2 border-transparent pb-1 font-medium transition hover:text-gold hover:border-gold">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<div class="max-w-6xl mx-auto px-6">
+
+  <!-- FIL D'ARIANE -->
+  <nav class="text-sm text-slate-500 my-6">
+    <a href="index.html" class="hover:text-gold">Accueil</a>
+    <span class="mx-2">›</span>
+    <a href="produits.html" class="hover:text-gold">Produits</a>
+    <span class="mx-2">›</span>
+    <span class="text-navy font-medium">Panneaux solaires</span>
+  </nav>
+
+  <!-- HERO CATÉGORIE -->
+  <div class="relative rounded-3xl overflow-hidden mb-10">
+    <img src="https://picsum.photos/seed/cat-solaire/1200/400" alt="Panneaux solaires" class="w-full h-56 md:h-72 object-cover">
+    <div class="absolute inset-0 bg-gradient-to-r from-navy/90 via-navy/70 to-navy/20"></div>
+    <div class="absolute inset-0 flex flex-col justify-center px-6 md:px-14 text-white">
+      <div class="flex items-center gap-3 mb-2">
+        <i class="bi bi-sun text-gold text-3xl"></i>
+        <h2 class="text-3xl md:text-5xl font-bold">Panneaux solaires</h2>
+      </div>
+      <p class="max-w-xl text-slate-100">Kits solaires et lampes pour une énergie fiable, même en cas de coupure.</p>
+    </div>
+  </div>
+
+  <!-- GRILLE PRODUITS -->
+  <h3 class="text-2xl font-semibold text-navy border-l-4 border-gold pl-4 mb-6">Modèles disponibles</h3>
+  <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6 mb-10">
+
+    <!-- Lampe 50W -->
+    <div class="bg-white rounded-2xl overflow-hidden shadow-sm border border-slate-200 hover:-translate-y-1 hover:shadow-lg transition flex flex-col">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUERozl-fCVmKnLCUL2KgbOVDwqukmu8qp3dP7poGHzQ&s" alt="Lampe 50W" class="w-full h-32 object-cover">
+      <div class="p-4 flex flex-col flex-1">
+        <h3 class="font-semibold">Lampe 50W</h3>
+        <p class="text-sm text-slate-500 mb-3 flex-1">Panneau solaire portable</p>
+        <a href="https://wa.me/22990068487?text=Bonjour%2C%20je%20suis%20intéressé%20par%20la%20Lampe%2050W."
+           target="_blank" rel="noopener noreferrer"
+           class="text-gold text-sm font-semibold hover:underline">Commander →</a>
+      </div>
+    </div>
+
+    <!-- Lampe solaire intérieur -->
+    <div class="bg-white rounded-2xl overflow-hidden shadow-sm border border-slate-200 hover:-translate-y-1 hover:shadow-lg transition flex flex-col">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS057lxu0rmCkMJqthpJAvp9KXrlyVYX3g3if8ngvNb3A&s=10" alt="Lampe solaire intérieur" class="w-full h-32 object-cover">
+      <div class="p-4 flex flex-col flex-1">
+        <h3 class="font-semibold">Lampe solaire intérieur</h3>
+        <p class="text-sm text-slate-500 mb-3 flex-1">Panneau solaire fixe</p>
+        <a href="https://wa.me/22990068487?text=Bonjour%2C%20je%20suis%20intéressé%20par%20la%20Lampe%20solaire%20intérieur."
+           target="_blank" rel="noopener noreferrer"
+           class="text-gold text-sm font-semibold hover:underline">Commander →</a>
+      </div>
+    </div>
+
+    <!-- Lampadaire solaire -->
+    <div class="bg-white rounded-2xl overflow-hidden shadow-sm border border-slate-200 hover:-translate-y-1 hover:shadow-lg transition flex flex-col">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6IQT5RlrscuVuaSOQU-F5hT0O2cwRigOrjVH0sTQY5w&s=10" alt="Lampadaire solaire" class="w-full h-32 object-cover">
+      <div class="p-4 flex flex-col flex-1">
+        <h3 class="font-semibold">Lampadaire solaire</h3>
+        <p class="text-sm text-slate-500 mb-3 flex-1">Lampadaire solaire portable</p>
+        <a href="https://wa.me/22990068487?text=Bonjour%2C%20je%20suis%20intéressé%20par%20le%20Lampadaire%20solaire."
+           target="_blank" rel="noopener noreferrer"
+           class="text-gold text-sm font-semibold hover:underline">Commander →</a>
+      </div>
+    </div>
+
+    <!-- Kit solaire 100W -->
+    <div class="bg-white rounded-2xl overflow-hidden shadow-sm border border-slate-200 hover:-translate-y-1 hover:shadow-lg transition flex flex-col">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTeXlrZp7JK7-tyxW_uhM_J5TKRyO0c5InQzh3Juz74Yw&s=10" alt="Kit solaire 100W" class="w-full h-32 object-cover">
+      <div class="p-4 flex flex-col flex-1">
+        <h3 class="font-semibold">Kit solaire 100W</h3>
+        <p class="text-sm text-slate-500 mb-3 flex-1">Avec batterie</p>
+        <a href="https://wa.me/22990068487?text=Bonjour%2C%20je%20suis%20intéressé%20par%20le%20Kit%20solaire%20100W."
+           target="_blank" rel="noopener noreferrer"
+           class="text-gold text-sm font-semibold hover:underline">Commander →</a>
+      </div>
+    </div>
+
+    <!-- Kit solaire 200W -->
+    <div class="bg-white rounded-2xl overflow-hidden shadow-sm border border-slate-200 hover:-translate-y-1 hover:shadow-lg transition flex flex-col">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSq7wQ_4NT8uPYDRn1ukEqJgQMLT35lO_G2Uv8SlsjpEw&s=10" alt="Kit solaire 200W" class="w-full h-32 object-cover">
+      <div class="p-4 flex flex-col flex-1">
+        <h3 class="font-semibold">Kit solaire 200W</h3>
+        <p class="text-sm text-slate-500 mb-3 flex-1">Pour usage domestique</p>
+        <a href="https://wa.me/22990068487?text=Bonjour%2C%20je%20suis%20intéressé%20par%20le%20Kit%20solaire%20200W."
+           target="_blank" rel="noopener noreferrer"
+           class="text-gold text-sm font-semibold hover:underline">Commander →</a>
+      </div>
+    </div>
+
+    <!-- Autres modèles -->
+    <div class="bg-white rounded-2xl overflow-hidden shadow-sm border border-slate-200 hover:-translate-y-1 hover:shadow-lg transition flex flex-col">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRMEziEYwcY5hnxt9aMGclOCWjSQXOI5F0yagTWbPEkMA&s=10" alt="Autres modèles" class="w-full h-32 object-cover">
+      <div class="p-4 flex flex-col flex-1">
+        <h3 class="font-semibold">Autres modèles</h3>
+        <p class="text-sm text-slate-500 mb-3 flex-1">Panneau solaire</p>
+        <a href="https://wa.me/22990068487?text=Bonjour%2C%20je%20suis%20intéressé%20par%20un%20autre%20modèle%20solaire."
+           target="_blank" rel="noopener noreferrer"
+           class="text-gold text-sm font-semibold hover:underline">Commander →</a>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- RETOUR -->
+  <a href="produits.html" class="inline-flex items-center gap-2 text-navy font-medium hover:text-gold transition mb-10">
+    <i class="bi bi-arrow-left"></i> Retour au catalogue
+  </a>
+
+  <!-- FOOTER -->
+  <footer class="mt-16 text-center text-slate-500 border-t border-slate-200 pt-8">
+    <p>&copy; 2026 Abdoulaye Market — Importation depuis la Chine</p>
+    <p class="text-sm mt-1">iPhone · Ordinateurs · Photocopieurs · Vêtements · Lampes solaires</p>
+  </footer>
+</div>
+
+<!-- BOUTON WHATSAPP FLOTTANT -->
+<a href="https://wa.me/22990068487?text=Bonjour%20Abdoulaye%20Market%2C%20je%20suis%20intéress%C3%A9%20par%20vos%20produits."
+   target="_blank" rel="noopener noreferrer" aria-label="Contacter sur WhatsApp"
+   class="group fixed bottom-7 right-7 z-[999] w-16 h-16 rounded-full bg-[#25d366] text-white border-2 border-white shadow-lg flex items-center justify-center text-3xl hover:scale-105 transition">
+  <i class="bi bi-whatsapp"></i>
+  <span class="pointer-events-none absolute right-[78px] whitespace-nowrap bg-navy text-white text-sm font-medium px-4 py-1.5 rounded-full opacity-0 group-hover:opacity-100 transition">WhatsApp</span>
+</a>
+
+</body>
+</html>
